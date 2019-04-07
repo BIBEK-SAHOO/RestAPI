@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Home</title>
+
+  <!-- Bootstrap core CSS -->
+    {% load static %}
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel='stylesheet'>
+
+  <!-- Custom styles for this template -->
+    <link href="{% static 'css/heroic-features.css' %}" rel='stylesheet'>
+
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">REST API</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/admin/">Admin
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/api/movie/">All Movies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/api/genre/">All Genre</a>
+          </li>
+          <li class="nav-item">
+            {% if user.is_authenticated %}
+              <a class="nav-link" href="javascript:void(0)">Hi! {{user.username}}</a>
+              {% else %}
+              <a class="nav-link" href="/rest-auth/login/">Login</a>
+              {% endif %}
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Jumbotron Header -->
+    <header class="jumbotron my-4">
+      <h1 class="display-3">A Warm Welcome!</h1>
+      <p class="lead">This is a RESTful API for Movies Created using Django REST Framework.</p>
+      <a href="/api/movie/" class="btn btn-primary btn-lg">All Movies</a>
+    </header>
+
+    <!-- Page Features -->
+    <div class="row text-center">
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <!--<img class="card-img-top" src="http://placehold.it/500x325" alt="">-->
+          <div class="card-body">
+            <h4 class="card-title">Standard User Credentials</h4>
+            <p class="card-text">username: testuser<br>
+                                 email: testuser@gmail.com<br>
+                                 password: testuser@123</p>
+          </div>
+          <div class="card-footer">
+            <a href="/rest-auth/login/" class="btn btn-primary">LogIn Here</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <!--<img class="card-img-top" src="http://placehold.it/500x325" alt="">-->
+          <div class="card-body">
+            <h4 class="card-title">Admin User Credentials</h4>
+            <p class="card-text">username: admin<br>
+                                 email: admin@gmail.com<br>
+                                 password: admin@123</p>
+          </div>
+          <div class="card-footer">
+            <a href="/admin/" class="btn btn-primary">Go To Admin</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <!--<img class="card-img-top" src="http://placehold.it/500x325" alt="">-->
+          <div class="card-body">
+            <h4 class="card-title">Movies</h4>
+            <p class="card-text" align="left">You can add, modify and delete movie details. i.e.<br>
+                                  Raw Input Structure:<br>
+                                  {                                   <br>
+                                      "popularity": 83.0,             <br>
+                                      "director": "Victor Fleming",   <br>
+                                      "genre": [                      <br>
+                                          {                           <br>
+                                              "category": "Adventure" <br>
+                                          },                          <br>
+                                          {                           <br>
+                                              "category": "Musical"   <br>
+                                          }                           <br>
+                                      ],                              <br>
+                                      "imdb_score": 8.3,              <br>
+                                      "name": "The Wizard of Oz"      <br>
+                                  }                                   <br>
+            </p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary">Add Or Edit Movies Here!</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <!--<img class="card-img-top" src="http://placehold.it/500x325" alt="">-->
+          <div class="card-body">
+            <h4 class="card-title">Genres</h4>
+            <p class="card-text">You can Add, Delete, Modify Genres Here.</p>
+          </div>
+          <div class="card-footer">
+            <a href="/api/genre/" class="btn btn-primary">Genres</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+</body>
+
+</html>
