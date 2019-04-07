@@ -1,4 +1,11 @@
+django==2.0.2
+djangorestframework
 django-filter
 django-rest-auth
+django-extensions
+pillow
+django-filter
+whoosh
+django-haystack
 Gunicorn
 whitenoise
