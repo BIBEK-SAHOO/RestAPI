@@ -1,2 +1,4 @@
 django-filter
 django-rest-auth
+Gunicorn
+whitenoise
