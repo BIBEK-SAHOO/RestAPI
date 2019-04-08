@@ -5,6 +5,7 @@ django-rest-auth
 django-extensions
 pillow
 django-filter
+dj_database_url
 whoosh
 django-haystack
 Gunicorn
