@@ -13,8 +13,8 @@ from rest_framework.filters import OrderingFilter, SearchFilter
 class MovieList(viewsets.ModelViewSet):
     queryset = Movies.objects.all()
     serializer_class = MoviesSerializer
-    filter_backends = (SearchFilter)
-    search_fields = ('username')
+    # filter_backends = (SearchFilter)
+    # search_fields = ('username')
 
 class GenreList(viewsets.ModelViewSet):
     queryset = Genre.objects.all()
