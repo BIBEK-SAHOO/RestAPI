@@ -25,7 +25,7 @@ SECRET_KEY = 'pbo#vb43$ly$kti)2miyb9h_86kxvp0te)=ge^t(&wn4yne)sd'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['demo-mysiteapi.herokuapp.com']
 
 
 # Application definition
