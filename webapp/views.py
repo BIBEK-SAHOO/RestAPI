@@ -13,7 +13,8 @@ from rest_framework.filters import OrderingFilter, SearchFilter
 class MovieList(viewsets.ModelViewSet):
     queryset = Movies.objects.all()
     serializer_class = MoviesSerializer
-    filter_backends = (SearchFilter)
+    filter_backends = (DjangoFilterBackend,OrderingFilter,SearchFilter)
+    ordering = ('name')
     search_fields = ('name',)
 
 class GenreList(viewsets.ModelViewSet):
