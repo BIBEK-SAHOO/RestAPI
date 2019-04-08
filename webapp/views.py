@@ -14,7 +14,7 @@ class MovieList(viewsets.ModelViewSet):
     queryset = Movies.objects.all()
     serializer_class = MoviesSerializer
     filter_backends = (SearchFilter)
-    search_fields = ('name')
+    search_fields = ('name',)
 
 class GenreList(viewsets.ModelViewSet):
     queryset = Genre.objects.all()
