@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'rest_auth',
     'webapp',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -83,6 +84,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASE_URL = os.environ['DATABASE_URL']
 
 conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
