@@ -12,7 +12,6 @@ class GenreSerializer(serializers.ModelSerializer):
 
 
 class MoviesSerializer(serializers.ModelSerializer):
-    # genre = serializers.PrimaryKeyRelatedField(queryset=Genre.objects.all(), many=True)
     genre = GenreSerializer(many=True)
     class Meta:
         model = Movies
